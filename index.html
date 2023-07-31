@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Canvas</h1>
+          <canvas id="sparks"></canvas>
+        </section>
+        <section>
+          <h2>Slide 2</h2>
+          <img src="./assets/canvas-logo.jpeg" alt="canvas-logo" />
+        </section>
+        <section>
+          <h2>Slide 3</h2>
+          <img src="./assets/beatles.jpeg" alt="beatles" />
+        </section>
+        <section>
+          <img src="./assets/code-1.png" alt="code fragment" />
+        </section>
+        <section>
+          <img src="./assets/ex-1.png" alt="example" />
+        </section>
+        <section>
+          <div>
+            <code> strokeRect(x, y, width, height)</code><br />
+            <span style="color: green">// Draws a Rectangle</span>
+          </div>
+          <div>
+            <code>clearRect(x, y, width, height) </code><br />
+            <span style="color: green">// Clears an area on the canvas the size of a rectangle</span>
+          </div>
+        </section>
+        <section>
+          <img src="./assets/code-2.png" alt="code fragment" />
+        </section>
+        <section>
+          <img src="./assets/ex-2.png" alt="example" />
+        </section>
+        <section>
+          <img src="./assets/code-2.png" alt="code fragment" />
+        </section>
+        <section>
+          <h2>Lines and arcs</h2>
+          <div><code>beginPath()</code></div>
+          <div><code style="background-color: #aaa; color: #000">closePath()</code></div>
+          <div><code>stroke()</code></div>
+          <div><code style="background-color: #aaa; color: #000">fill()</code></div>
+          <div><code>moveTo(x, y) </code></div>
+          <div><code style="background-color: #aaa; color: #000">lineTo(x, y)</code></div>
+          <div><code>arc(x, y, radius, startAngle, endAngle, anticlockwise)</code></div>
+          <div>
+            <code style="background-color: #aaa; color: #000"
+              >bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY);</code
+            >
+          </div>
+        </section>
+        <section>
+          <h2>Slide 10</h2>
+          <img src="./assets/truth.png" alt="trut" />
+        </section>
+        <section>
+          <h2>Colors</h2>
+          <div style="display: flex; column-gap: 20px">
+            <div style="width: 50px; height: 50px; background-color: lightgreen"></div>
+            <div>lightgreen</div>
+          </div>
+          <div style="display: flex; column-gap: 20px">
+            <div style="width: 50px; height: 50px; background-color: #f08080"></div>
+            <div>#f08080</div>
+          </div>
+          <div style="display: flex; column-gap: 20px">
+            <div style="width: 50px; height: 50px; background-color: rgb(255, 165, 0)"></div>
+            <div>rgb(255, 165, 0)</div>
+          </div>
+          <div style="display: flex; column-gap: 20px">
+            <div style="width: 50px; height: 50px; background-color: rgba(255, 165, 0, 0.5)"></div>
+            <div>rgba(255, 165, 0, 0.5)</div>
+          </div>
+        </section>
+        <section>
+          <h2>Slide 12</h2>
+          <img src="./assets/ex-3.png" alt="example 3" />
+        </section>
+        <section><img src="./assets/code-3.png" alt="code-3" /></section>
+        <section>
+          <h2>Slide 13</h2>
+          <div style="display: flex; column-gap: 20px">
+            <div style="width: 50px; height: 50px; background: linear-gradient(blue, white)"></div>
+            <div>createLinearGradient</div>
+          </div>
+          <div style="display: flex; column-gap: 20px">
+            <div style="width: 50px; height: 50px; background: radial-gradient(white, green)"></div>
+            <div>createRadialGradient</div>
+          </div>
+          <div style="display: flex; column-gap: 20px">
+            <div
+              style="
+                width: 50px;
+                height: 50px;
+                background: url('./assets/check.png') no-repeat center;
+                background-size: contain;
+              "></div>
+            <div>addColorStop</div>
+          </div>
+        </section>
+        <section><img src="./assets/code-4.png" alt="code-4" /></section>
+        <section>
+          <h2>Two steps for images</h2>
+          <div style="display: flex; column-gap: 20px">
+            <div
+              style="
+                width: 50px;
+                height: 50px;
+                background: url('./assets/check.png') no-repeat center;
+                background-size: contain;
+              "></div>
+            <div>creating JavaScript object Image</div>
+          </div>
+          <div style="display: flex; column-gap: 20px">
+            <div
+              style="
+                width: 50px;
+                height: 50px;
+                background: url('./assets/check.png') no-repeat center;
+                background-size: contain;
+              "></div>
+            <div>painting this image with drawImage function</div>
+          </div>
+        </section>
+        <section><img src="./assets/ex-5.png" alt="ex-5" /></section>
+        <section><img src="./assets/code-5.png" alt="" /></section>
+        <section>
+          <h2>drawImage arguments</h2>
+          <ul>
+            <li><span style="color: #f08080">3: </span> image, x, y;</li>
+            <li><span style="color: #f08080">5: </span>previous ones + width and height to resize the image;</li>
+            <li>
+              <span style="color: #f08080">9: </span>
+              previous ones + two for the coordinates of the area inside the original image and two for the width and
+              height of the area inside the original image to crop the image before pasting it into the Canvas
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Animations</h2>
+          <canvas class="c">animated rainbow wave</canvas>
+        </section>
+        <section>
+          <h2>Required steps for animation</h2>
+          <ul>
+            <li>Clear canvas (with clearRect(), for example).</li>
+            <li>Save inition state</li>
+            <li>Drow animated characters</li>
+            <li>Restore canvas's State</li>
+          </ul>
+        </section>
+        <section>
+          <h2>To manage the animation</h2>
+          <ul>
+            <li>setInterval(function, delay)</li>
+            <li>setTimeout(function, delay)</li>
+            <li>requestAnimationFrame(callback)</li>
+          </ul>
+        </section>
+        <section><img src="./assets/game.png" alt="game" /></section>
+
+        <section>no cyclist was hurt</section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+
+      let OPT = {
+        selector: '#sparks',
+        amount: 5000,
+        speed: 0.05, // pixels per frame
+        lifetime: 200,
+        direction: { x: -0.5, y: 1 },
+        size: [2, 2],
+        maxopacity: 1,
+        color: '150, 150, 150',
+        randColor: true,
+        acceleration: [5, 40],
+      };
+
+      if (window.innerWidth < 520) {
+        OPT.speed = 0.05;
+        OPT.color = '150, 150, 150';
+      }
+
+      (function spark() {
+        const canvas = document.querySelector(OPT.selector);
+        const ctx = canvas.getContext('2d');
+
+        let sparks = [];
+
+        window.addEventListener('resize', () => {
+          setCanvasWidth();
+        });
+
+        function setCanvasWidth() {
+          ctx.canvas.width = window.innerWidth;
+          ctx.canvas.height = window.innerHeight;
+        }
+
+        function rand(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Init animation
+        function init() {
+          setCanvasWidth();
+
+          window.setInterval(() => {
+            if (sparks.length < OPT.amount) {
+              addSpark();
+            }
+          }, 1000 / OPT.amount);
+
+          window.requestAnimationFrame(draw);
+        }
+
+        function draw() {
+          ctx.fillStyle = 'rgba(0,0,0, 0.1)';
+          ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+          sparks.forEach((spark, i, array) => {
+            if (spark.opacity <= 0) {
+              array.splice(i, 1);
+            } else {
+              drawSpark(spark);
+            }
+          });
+
+          window.requestAnimationFrame(draw);
+        }
+
+        function Spark(x, y) {
+          this.x = x;
+          this.y = y;
+          this.age = 0;
+          this.acceleration = rand(OPT.acceleration[0], OPT.acceleration[1]);
+
+          this.color = OPT.randColor ? rand(0, 255) + ',' + rand(0, 255) + ',' + rand(0, 255) : OPT.color;
+
+          this.opacity = OPT.maxopacity - this.age / (OPT.lifetime * rand(1, 10));
+
+          this.go = function () {
+            this.x += (OPT.speed * OPT.direction.x * this.acceleration) / 2;
+            this.y += (OPT.speed * OPT.direction.y * this.acceleration) / 2;
+
+            this.opacity = OPT.maxopacity - ++this.age / OPT.lifetime;
+          };
+        }
+
+        function addSpark() {
+          let x = rand(-200, window.innerWidth + 200);
+          let y = rand(-200, window.innerHeight + 200);
+          sparks.push(new Spark(x, y));
+        }
+
+        function drawSpark(spark) {
+          let x = spark.x,
+            y = spark.y;
+
+          spark.go();
+
+          ctx.beginPath();
+          ctx.fillStyle = `rgba(${spark.color}, ${spark.opacity})`;
+          ctx.rect(x, y, OPT.size[0], OPT.size[1], 0, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        init();
+      })();
+
+      var c = document.querySelector('.c') /* canvas element */,
+        w /* canvas width */,
+        h /* canvas height */,
+        ctx = c.getContext('2d') /* canvas context */,
+        /* previous & current coordinates */
+        x0,
+        y0,
+        x,
+        y,
+        t = 0,
+        t_step = 1 / 20,
+        tmp,
+        /* just me being lazy */
+        exp = Math.exp,
+        pow = Math.pow,
+        sqrt = Math.sqrt,
+        PI = Math.PI,
+        sin = Math.sin,
+        cos = Math.cos;
+
+      /* FUNCTIONS */
+      /* a random number between min & max */
+      var rand = function (max, min) {
+        var b = max === 0 || max ? max : 1,
+          a = min || 0;
+
+        return a + (b - a) * Math.random();
+      };
+
+      var trimUnit = function (input_str, unit) {
+        return parseInt(input_str.split(unit)[0], 10);
+      };
+
+      var initCanvas = function () {
+        var s = getComputedStyle(c);
+
+        w = c.width = trimUnit(s.width, 'px');
+        h = c.height = trimUnit(s.height, 'px');
+      };
+
+      var wave = function () {
+        (x0 = -1), (y0 = h / 2);
+
+        ctx.clearRect(0, 0, w, h);
+
+        tmp = pow(t, 1.75) / 19; /* keep computation out of loop */
+
+        for (x = 0; x < w; x = x + 3) {
+          y =
+            9 * sqrt(x) * sin(x / 23 / PI + t / 3 + sin(x / 29 + t)) +
+            32 * sin(t) * cos(x / 19 + t / 7) +
+            16 * cos(t) * sin(sqrt(x) + rand(3, 2) * tmp) +
+            h / 2;
+
+          ctx.beginPath();
+          ctx.moveTo(x0, y0);
+          ctx.lineTo(x, y);
+          ctx.lineWidth = 2;
+          ctx.strokeStyle = 'hsl(' + ((2 * x) / w + t) * 180 + ', 100%, 65%)';
+          ctx.stroke();
+
+          x0 = x;
+          y0 = y;
+        }
+
+        t += t_step;
+
+        requestAnimationFrame(wave);
+      };
+
+      /* START THE MADNESS */
+      setTimeout(function () {
+        initCanvas();
+        wave();
+
+        /* fix looks on resize */
+        addEventListener('resize', initCanvas, false);
+      }, 15);
+    </script>
+  </body>
+</html>
